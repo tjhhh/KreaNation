@@ -5,7 +5,7 @@ import { SectionTitle } from "../ui/SectionTitle";
 
 export const TestimonialsSection: React.FC = () => {
   return (
-    <section id="testimonials" className="py-sp-xl md:py-32 bg-surface-bright scroll-mt-20">
+    <section id="testimonials" className="py-sp-xl md:py-32 scroll-mt-20">
       <div className="max-w-container-max mx-auto px-gutter">
         {/* Header */}
         <SectionTitle

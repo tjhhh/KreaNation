@@ -7,7 +7,7 @@ import { Badge } from "../ui/Badge";
 
 export const ShowcaseSection: React.FC = () => {
   return (
-    <section id="showcase" className="py-sp-xl md:py-32 bg-surface-bright scroll-mt-20">
+    <section id="showcase" className="py-sp-xl md:py-32 scroll-mt-20">
       <div className="max-w-container-max mx-auto px-gutter">
         {/* Header */}
         <SectionTitle

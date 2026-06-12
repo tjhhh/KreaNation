@@ -6,12 +6,14 @@ import { ShowcaseSection } from "../components/sections/ShowcaseSection";
 import { ImpactSection } from "../components/sections/ImpactSection";
 import { TestimonialsSection } from "../components/sections/TestimonialsSection";
 import { CTASection } from "../components/sections/CTASection";
+import { AnimatedBackground } from "../components/ui/AnimatedBackground";
 
 export default function Home() {
   return (
     <>
+      <AnimatedBackground />
       <Navbar />
-      <main className="flex-1 pt-20">
+      <main className="relative z-10 flex-1 pt-20">
         <HeroSection />
         <JourneySection />
         <ShowcaseSection />
@@ -19,7 +21,9 @@ export default function Home() {
         <TestimonialsSection />
         <CTASection />
       </main>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </>
   );
 }

@@ -3,7 +3,7 @@ import { ShowcaseItem } from "../types";
 export const showcaseItems: ShowcaseItem[] = [
   {
     id: "1",
-    title: "LokalHub",
+    title: "KreaKios",
     category: "Website Bisnis",
     description: "Platform digitalisasi toko kelontong dan UMKM lokal dengan fitur katalog produk interaktif.",
     impact: "Membantu 50+ UMKM di Jawa Barat go-digital.",
@@ -11,7 +11,7 @@ export const showcaseItems: ShowcaseItem[] = [
   },
   {
     id: "2",
-    title: "SinauYuk",
+    title: "AksaraPlay",
     category: "Pendidikan",
     description: "Aplikasi belajar bahasa daerah berbasis gamifikasi untuk anak-anak sekolah dasar.",
     impact: "Digunakan oleh 1.200+ siswa sekolah dasar.",
@@ -19,7 +19,7 @@ export const showcaseItems: ShowcaseItem[] = [
   },
   {
     id: "3",
-    title: "BantuTulis AI",
+    title: "KarsaKata AI",
     category: "AI & Produktivitas",
     description: "Asisten kecerdasan buatan untuk membantu content creator merancang draf artikel dengan bahasa Indonesia baku.",
     impact: "Mempercepat pembuatan draf tulisan hingga 60%.",

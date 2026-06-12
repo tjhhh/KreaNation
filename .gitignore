@@ -19,7 +19,7 @@
 
 # production
 /build
-
+/acuan
 # misc
 .DS_Store
 *.pem
