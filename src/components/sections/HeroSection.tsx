@@ -10,7 +10,7 @@ export const HeroSection: React.FC = () => {
         {/* Left Column: Copywriting & CTAs */}
         <div className="flex flex-col gap-sp-md text-left z-10">
           <Badge icon="lightbulb" variant="active" className="animate-fade-slide-up" style={{ animationDelay: "100ms" }}>
-            Gerakan Kreatif Pemuda
+            Inisiatif Mahreen Indonesia
           </Badge>
           
           <h1 className="font-display-text text-[40px] leading-[48px] md:text-[56px] md:leading-[64px] lg:text-[64px] lg:leading-[72px] text-on-surface tracking-tight font-extrabold animate-fade-slide-up" style={{ animationDelay: "250ms" }}>

@@ -12,12 +12,17 @@ export const Navbar: React.FC = () => {
     <header className="fixed top-0 left-0 w-full z-50 bg-surface-bright/80 backdrop-blur-md border-b border-outline-variant/10 shadow-sm transition-all duration-300">
       <div className="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
         {/* Brand */}
-        <Link 
-          href="/" 
-          className="font-headline-md text-headline-md font-extrabold text-primary hover:opacity-90 transition-all duration-200"
-        >
-          KreaNation
-        </Link>
+        <div className="flex items-baseline gap-2">
+          <Link 
+            href="/" 
+            className="font-headline-md text-headline-md font-extrabold text-primary hover:opacity-90 transition-all duration-200"
+          >
+            KreaNation
+          </Link>
+          <span className="font-label-sm text-secondary/60 select-none hidden sm:inline">
+            by Mahreen Indonesia
+          </span>
+        </div>
 
         {/* Links (Desktop) */}
         <nav className="hidden md:flex items-center gap-sp-md">

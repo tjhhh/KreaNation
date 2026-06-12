@@ -2,7 +2,7 @@ import { NavigationItem } from "../types";
 
 export const navItems: NavigationItem[] = [
   { name: "Alur Belajar", href: "#journey" },
-  { name: "Galeri Karya", href: "#showcase" },
+  { name: "Cara Berkarya", href: "#showcase" },
   { name: "Dampak Kita", href: "#impact" },
 ];
 

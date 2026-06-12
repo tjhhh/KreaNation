@@ -31,9 +31,9 @@ const AnimatedCounter: React.FC<{ value: number; suffix: string }> = ({ value, s
   }, [value]);
 
   return (
-    <div className="font-display text-[40px] md:text-[48px] leading-tight font-black text-on-surface tracking-tight flex items-center justify-center select-none">
+    <div className="font-display text-[40px] md:text-[48px] leading-tight font-bold text-on-surface tracking-tight flex items-center justify-center select-none">
       <span>{count.toLocaleString("id-ID")}</span>
-      <span className="text-primary font-extrabold">{suffix}</span>
+      <span className="text-primary font-bold">{suffix}</span>
     </div>
   );
 };
@@ -58,20 +58,28 @@ export const ImpactSection: React.FC = () => {
             <Card
               key={stat.id}
               padding="lg"
-              className="flex flex-col items-center justify-center text-center bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/20 transition-all duration-300"
+              className="flex flex-col items-center justify-center text-center bg-surface-container-lowest border border-outline-variant/20 hover:border-primary/20 transition-all duration-300 relative group overflow-hidden"
             >
+              {/* Subtle background glow that appears on hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0"></div>
+              
+              {/* A tiny top accent line on hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-primary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></div>
+
               {/* Icon Bubble */}
-              <div className="w-14 h-14 rounded-full bg-primary-container/10 border border-primary/10 flex items-center justify-center text-primary mb-sp-md">
+              <div className="w-14 h-14 rounded-full bg-primary-container/10 border border-primary/10 flex items-center justify-center text-primary mb-sp-md group-hover:bg-primary group-hover:text-white group-hover:scale-105 transition-all duration-300 relative z-10">
                 <span className="material-symbols-outlined text-[28px]">
                   {stat.icon}
                 </span>
               </div>
 
               {/* Number Value */}
-              <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+              <div className="relative z-10">
+                <AnimatedCounter value={stat.value} suffix={stat.suffix} />
+              </div>
 
               {/* Label */}
-              <p className="font-label-md text-label-md text-secondary leading-normal mt-2">
+              <p className="font-label-md text-label-md text-secondary leading-normal mt-2 relative z-10">
                 {stat.label}
               </p>
             </Card>

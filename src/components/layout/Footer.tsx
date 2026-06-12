@@ -64,10 +64,10 @@ export const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row justify-between items-center gap-sp-xs">
           <p className="font-label-sm text-label-sm text-secondary text-center sm:text-left">
-            &copy; {new Date().getFullYear()} KreaNation. Dibuat dengan semangat kepemudaan.
+            &copy; {new Date().getFullYear()} KreaNation. Didukung oleh Mahreen Indonesia.
           </p>
           <p className="font-label-sm text-label-sm text-secondary/60 text-center sm:text-right">
-            Bukan lembaga formal, tapi gerakan bersama untuk Indonesia.
+            Inisiatif resmi dari Mahreen Indonesia untuk mendukung kreativitas pemuda.
           </p>
         </div>
       </div>

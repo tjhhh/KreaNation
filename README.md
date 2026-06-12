@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KreaNation 🚀
+*Inisiatif Kreatif & Teknologi oleh Mahreen Indonesia*
 
-## Getting Started
+**KreaNation** adalah landing page modern dan interaktif yang dirancang untuk menginspirasi dan mewadahi generasi muda Indonesia (usia 16-30 tahun) agar dapat bertransformasi dari penikmat teknologi menjadi pencipta karya digital yang berdampak nyata bagi masyarakat sekitar.
 
-First, run the development server:
+Proyek ini menggunakan framework modern **Next.js (App Router)** dengan optimasi visual premium, mikro-animasi responsif, dan prinsip psikologi UX yang ramah pengguna.
+
+---
+
+## 🌟 Visi & Misi
+
+### Visi
+Menjadi sebuah gerakan dan komunitas kolaboratif tempat anak muda Indonesia belajar, berkreasi, dan saling mendukung dalam melahirkan karya digital solutif di era industri kreatif modern.
+
+### Misi Utama (3 Pilar Gerakan)
+1. **Membuka Akses Skill Digital**: Menyediakan materi dan panduan eksplorasi skill digital esensial dari nol (coding, desain UI/UX, AI, dll) tanpa hambatan ketakutan belajar.
+2. **Mendorong Kolaborasi Kreatif**: Mempertemukan kreator muda dari berbagai disiplin ilmu untuk menyatukan ide dan merancang portofolio profesional bersama.
+3. **Menghasilkan Dampak Nyata**: Mengarahkan setiap karya digital untuk langsung berkontribusi mendigitalisasi UMKM lokal dan mendukung kampanye sosial.
+
+---
+
+## 🛠️ Tech Stack & Kebutuhan Sistem
+
+* **Core Framework**: [Next.js](https://nextjs.org/) (App Router, React 19)
+* **Language**: [TypeScript](https://www.typescriptlang.org/) (Strict typing untuk navigasi, data, dan properti)
+* **Styling & Layout**: [Tailwind CSS](https://tailwindcss.com/)
+* **Typography**: Google Fonts - Montserrat (Display & Headings) dan Inter (Body & Labels)
+* **Icons**: Google Material Symbols Outlined
+* **Environment**: Node.js v18.0.0 atau lebih tinggi
+
+---
+
+## 📂 Struktur Folder Proyek
+
+Mengikuti panduan arsitektur modular yang rapi agar mudah dipelihara dan dikembangkan:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+├── app/                  # Next.js App Router (Page views, layout, globals.css)
+├── components/
+│   ├── layout/           # Navbar, Footer
+│   ├── sections/         # HeroSection, AboutSection, JourneySection, ShowcaseSection, dll
+│   └── ui/               # Reusable UI components (Button, Card, Badge, SectionTitle)
+├── constants/            # Nilai-nilai konfigurasi konstan
+├── data/                 # Penyimpanan konten statis (navigation, journey, showcase, statistics)
+├── lib/                  # Fungsi utilitas penolong (helpers)
+├── styles/               # File CSS tambahan
+└── types/                # Definisi tipe data TypeScript (interfaces)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 Detail Implementasi & Fitur Premium
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Halaman ini dibangun dengan detail visual dan teknis yang tinggi untuk menciptakan kesan pertama yang memukau:
 
-## Learn More
+1. **Tentang & Misi Section**: Menjelaskan latar belakang kolaborasi Mahreen Indonesia dengan visual *split-column layout*. Kartu misinya dilengkapi dengan **ambient glow** dan **left border accent** yang meluncur secara dinamis saat kursor menyentuh kartu.
+2. **Alur Tumbuh Bersama (Journey)**: Proses belajar terarah (*Learn $\rightarrow$ Build $\rightarrow$ Impact*) menggunakan bahasa kolektif *"Kita"* untuk membangun rasa memiliki. Menggunakan teknik **Optical Vertical Alignment** (`translate-y-[2px]`) untuk menyelaraskan nomor latar belakang besar dengan kotak ikon secara presisi.
+3. **Cara Berkarya Bersama (Showcase)**: Berisi 9 kartu program kolaboratif interaktif (Workshop, Coding, Hackathon, Webinar, dll) dengan fitur **Load More interaktif**. Kartu ke-7 hingga 9 memiliki efek animasi *staggered-fade-in* bertingkat saat diungkap.
+4. **Dampak Nyata (Statistics)**: Menampilkan data pencapaian kuantitatif dengan efek animasi **Count-Up**. Ukuran font angka dikoreksi dari `font-black` (terlalu gemuk) menjadi `font-bold` agar lebih bersih, tajam, dan elegan.
+5. **Responsive Grid**: Seluruh layout didesain secara *mobile-first* dan menyesuaikan secara natural di layar smartphone, tablet, maupun desktop tanpa adanya elemen yang terpotong.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Cara Menjalankan Proyek Secara Lokal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ikuti langkah-langkah di bawah ini untuk memulai pengembangan di komputer lokal Anda:
 
-## Deploy on Vercel
+### 1. Kloning Proyek & Masuk ke Direktori
+```bash
+git clone <repository-url>
+cd kreanation
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Instalasi Dependensi
+```bash
+npm install
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 3. Jalankan Dev Server
+```bash
+npm run dev
+```
+Setelah server berjalan, buka browser di alamat [http://localhost:3000](http://localhost:3000).
+
+### 4. Build untuk Produksi
+Guna memvalidasi performa dan keselarasan kode produksi, jalankan perintah:
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 🤝 Kontribusi & Gerakan
+Proyek KreaNation terbuka untuk kolaborasi berkelanjutan bagi seluruh developer, desainer, copywriter, dan pegiat AI muda Indonesia yang ingin memajukan ekosistem teknologi kreatif di tanah air. 
+
+Mari berkarya bersama untuk dampak yang lebih besar! 🇮🇩

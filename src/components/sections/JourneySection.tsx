@@ -12,7 +12,7 @@ export const JourneySection: React.FC = () => {
           eyebrow="Bagaimana Kita Tumbuh"
           eyebrowIcon="insights"
           title="Alur Tumbuh Bersama KreaNation"
-          subtitle="Proses sederhana dan terarah untuk membantumu mengubah gagasan mentah menjadi karya digital berdampak."
+          subtitle="Proses sederhana dan terarah untuk menemani perjalanan kita mengubah gagasan kreatif menjadi karya digital yang membawa dampak."
           align="center"
           className="mb-sp-xl"
         />
@@ -26,14 +26,20 @@ export const JourneySection: React.FC = () => {
             <Card
               key={step.number}
               padding="lg"
-              className="flex flex-col gap-sp-sm bg-surface-container-lowest border border-outline-variant/20 h-full relative group"
+              className="flex flex-col gap-sp-sm bg-surface-container-lowest border border-outline-variant/20 h-full relative group overflow-hidden"
             >
+              {/* Subtle background glow that appears on hover */}
+              <div className="absolute inset-0 bg-gradient-to-b from-primary/[0.04] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none z-0"></div>
+              
+              {/* A tiny top accent line on hover */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-primary/50 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left z-0"></div>
+
               {/* Top Row: Number & Icon */}
-              <div className="flex justify-between items-center w-full">
-                <span className="font-display text-[48px] leading-none font-black text-primary/10 tracking-tight select-none">
+              <div className="flex justify-between items-center w-full h-12 relative z-10">
+                <span className="font-display text-[48px] leading-none font-bold text-primary/10 tracking-tight select-none translate-y-[2px]">
                   {step.number}
                 </span>
-                <div className="w-12 h-12 rounded-xl bg-primary-container/10 border border-primary/10 flex items-center justify-center text-primary group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <div className="w-12 h-12 rounded-xl bg-primary-container/10 border border-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
                   <span className="material-symbols-outlined text-[24px]">
                     {step.icon}
                   </span>
@@ -41,8 +47,8 @@ export const JourneySection: React.FC = () => {
               </div>
 
               {/* Title & Description */}
-              <div className="flex flex-col gap-sp-xs">
-                <h3 className="font-headline-md text-headline-md text-on-surface">
+              <div className="flex flex-col gap-sp-xs relative z-10">
+                <h3 className="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors duration-200">
                   {step.title}
                 </h3>
                 <p className="font-body-md text-body-md text-secondary leading-relaxed">

@@ -1,31 +1,42 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { showcaseItems } from "../../data/showcase";
 import { Card } from "../ui/Card";
 import { SectionTitle } from "../ui/SectionTitle";
 import { Badge } from "../ui/Badge";
+import { Button } from "../ui/Button";
 
 export const ShowcaseSection: React.FC = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  // Show only 6 items by default, show all if expanded
+  const displayedItems = isExpanded ? showcaseItems : showcaseItems.slice(0, 6);
+
   return (
     <section id="showcase" className="py-sp-xl md:py-32 scroll-mt-20">
       <div className="max-w-container-max mx-auto px-gutter">
         {/* Header */}
         <SectionTitle
-          eyebrow="Galeri Inovasi"
-          eyebrowIcon="gallery_thumbnail"
-          title="Karya Nyata dari Kreator KreaNation"
-          subtitle="Lihat bagaimana ide-ide kecil berubah menjadi produk digital yang memecahkan masalah nyata masyarakat."
+          eyebrow="Peluang Kolaborasi"
+          eyebrowIcon="groups"
+          title="Cara Berkarya Bersama Kami"
+          subtitle="Jelajahi berbagai program interaktif dan wadah kolaboratif yang kami rancang untuk mengasah kreativitas dan teknologi di dunia nyata."
           align="center"
           className="mb-sp-xl"
         />
 
         {/* Showcase Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-sp-md">
-          {showcaseItems.map((item) => (
+          {displayedItems.map((item, index) => (
             <Card
               key={item.id}
               padding="none"
-              className="flex flex-col bg-surface-container-lowest border border-outline-variant/20 h-full group"
+              className={`flex flex-col bg-surface-container-lowest border border-outline-variant/20 h-full group ${
+                index >= 6 ? "animate-fade-slide-up" : ""
+              }`}
+              style={index >= 6 ? { animationDelay: `${(index - 6) * 100}ms` } : undefined}
             >
               {/* Product Screenshot / Graphic */}
               <div className="relative w-full aspect-[16/10] overflow-hidden bg-surface-container-low border-b border-outline-variant/10">
@@ -67,7 +78,25 @@ export const ShowcaseSection: React.FC = () => {
             </Card>
           ))}
         </div>
+
+        {/* Load More / Toggle Button */}
+        {showcaseItems.length > 6 && (
+          <div className="flex justify-center mt-12">
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => setIsExpanded(!isExpanded)}
+              className="gap-2 group"
+            >
+              <span>{isExpanded ? "Tampilkan Lebih Sedikit" : "Lihat Karya Lainnya"}</span>
+              <span className={`material-symbols-outlined text-[20px] transition-transform duration-300 ${isExpanded ? "rotate-180" : ""}`}>
+                expand_more
+              </span>
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );
 };
+
